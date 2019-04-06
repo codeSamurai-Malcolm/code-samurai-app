@@ -98,7 +98,10 @@ app.get('/additem', function (request, response) {
     response.render('addpage',{loginName:request.session.user});
 });
 
-
+app.get('/delete', function (request, response) {
+    var listAll = deleteAndSort('game',request.query.game)
+    response.render('listpage',{items: listAll});
+});
 
 // click Welcome on login page
 app.post('/login', function (request, response) {
