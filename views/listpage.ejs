@@ -10,12 +10,18 @@
 
     <table class="highlight">
         <tr>
-            <th>Song</th><th>Singer</th><th>Added By</th><th>Likes</th><th>Actions</th>
+            <th>game</th><th>creator</th><th>Added By</th><th>Likes</th><th>Actions</th>
         </tr>
 
         <% items.forEach(function(item){  %>
 
-
+<tr>
+        <td><%= item.game%></td>
+     <td><%= item.creator%></td>
+     <td><%=item.addedby%></td>
+     <td><%=item.likes%></td>
+     <td><%=item.actions%></td>
+</tr>
 
 
 
